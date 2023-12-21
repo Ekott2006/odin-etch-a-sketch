@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Odin Etch-A-Sketch</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="input-range.css">
+  </head>
+  <body>
+    <h1>Etch-A-Sketch</h1>
+    <main>
+      <section class="sidebar">
+        <div class="input">
+          <input type="color" name="" id="pen-color" value="#000000" />
+          <label for="pen-color">Pen Color</label>
+        </div>
+        <div class="input">
+          <input type="color" name="" id="bg-color" value="#ffffff" />
+          <label for="bg-color">Background Color</label>
+        </div>
+
+        <button class="toggle" id="eraser"  onclick="toggleEraser()">Toggle Eraser</button>
+        <button class="toggle" id="pen" onclick="togglePenColor()">
+          Toggle Pen Color
+        </button>
+        <button class="toggle" id="rainbow" onclick="toggleRainbow()">Toggle Rainbow</button>
+        <button class="toggle" id="darken" onclick="toggleDarken()">Toggle Darken</button>
+        <button class="toggle" id="lighten" onclick="toggleLighten()">Toggle Lighten</button>
+        <div id="slider-input">
+            <input type="range" id="slider" min="1" max="100" value="96" />
+            <label for="slider">Grid Size: <span id="grid-size"></span> </label>
+        </div>
+        <button onclick="clearGrid()">Clear</button>
+      </section>
+
+      <section id="grid"></section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
